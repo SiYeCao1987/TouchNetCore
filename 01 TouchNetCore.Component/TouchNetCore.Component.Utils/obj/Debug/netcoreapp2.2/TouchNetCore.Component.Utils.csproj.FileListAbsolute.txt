@@ -1,0 +1,8 @@
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.deps.json
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.dll
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.pdb
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.csproj.CoreCompileInputs.cache
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.AssemblyInfoInputs.cache
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.AssemblyInfo.cs
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.dll
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.pdb
