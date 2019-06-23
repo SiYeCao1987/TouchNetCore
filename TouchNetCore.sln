@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 TouchNetCore.Component", "01 TouchNetCore.Component", "{AAB810FB-C8D8-419C-A464-9BEF80FB0DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Component.Utils", "01 TouchNetCore.Component\TouchNetCore.Component.Utils\TouchNetCore.Component.Utils.csproj", "{6B1ED805-445B-4E29-BF80-69F93B7E144E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouchNetCore.Component.Utils", "01 TouchNetCore.Component\TouchNetCore.Component.Utils\TouchNetCore.Component.Utils.csproj", "{6B1ED805-445B-4E29-BF80-69F93B7E144E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Component.Autofac", "01 TouchNetCore.Component\TouchNetCore.Component.Autofac\TouchNetCore.Component.Autofac.csproj", "{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{6B1ED805-445B-4E29-BF80-69F93B7E144E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B1ED805-445B-4E29-BF80-69F93B7E144E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B1ED805-445B-4E29-BF80-69F93B7E144E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6B1ED805-445B-4E29-BF80-69F93B7E144E} = {AAB810FB-C8D8-419C-A464-9BEF80FB0DCB}
+		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01} = {AAB810FB-C8D8-419C-A464-9BEF80FB0DCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {682BE16B-10FE-4E19-909E-ED8B9441432D}
