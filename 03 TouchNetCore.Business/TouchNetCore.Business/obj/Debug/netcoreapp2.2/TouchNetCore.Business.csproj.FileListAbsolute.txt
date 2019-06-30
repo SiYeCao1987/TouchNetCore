@@ -1,0 +1,8 @@
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Business.deps.json
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Business.dll
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Business.pdb
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcoreapp2.2\TouchNetCore.Business.csproj.CoreCompileInputs.cache
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcoreapp2.2\TouchNetCore.Business.AssemblyInfoInputs.cache
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcoreapp2.2\TouchNetCore.Business.AssemblyInfo.cs
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcoreapp2.2\TouchNetCore.Business.dll
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcoreapp2.2\TouchNetCore.Business.pdb

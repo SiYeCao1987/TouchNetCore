@@ -1,0 +1,8 @@
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\bin\Debug\netcoreapp2.2\TouchNetCore.Task.deps.json
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\bin\Debug\netcoreapp2.2\TouchNetCore.Task.dll
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\bin\Debug\netcoreapp2.2\TouchNetCore.Task.pdb
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.csproj.CoreCompileInputs.cache
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.AssemblyInfoInputs.cache
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.AssemblyInfo.cs
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.dll
+E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.pdb

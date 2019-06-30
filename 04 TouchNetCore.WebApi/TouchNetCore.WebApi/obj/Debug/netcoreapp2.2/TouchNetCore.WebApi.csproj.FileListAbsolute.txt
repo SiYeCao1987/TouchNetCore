@@ -1,0 +1,14 @@
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.csproj.CoreCompileInputs.cache
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.AssemblyInfoInputs.cache
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.AssemblyInfo.cs
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.WebApi.deps.json
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.WebApi.runtimeconfig.json
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.WebApi.runtimeconfig.dev.json
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.WebApi.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.WebApi.pdb
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.RazorAssemblyInfo.cache
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.RazorAssemblyInfo.cs
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.RazorTargetAssemblyInfo.cache
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.pdb
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.csprojAssemblyReference.cache

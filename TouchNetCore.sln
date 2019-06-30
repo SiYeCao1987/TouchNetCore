@@ -7,7 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 TouchNetCore.Component",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouchNetCore.Component.Utils", "01 TouchNetCore.Component\TouchNetCore.Component.Utils\TouchNetCore.Component.Utils.csproj", "{6B1ED805-445B-4E29-BF80-69F93B7E144E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Component.Autofac", "01 TouchNetCore.Component\TouchNetCore.Component.Autofac\TouchNetCore.Component.Autofac.csproj", "{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouchNetCore.Component.Autofac", "01 TouchNetCore.Component\TouchNetCore.Component.Autofac\TouchNetCore.Component.Autofac.csproj", "{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 TouchNetCore.Task", "02 TouchNetCore.Task", "{116BF4D7-E30D-4EC5-97EE-9F61A2B1DC83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 TouchNetCore.Business", "03 TouchNetCore.Business", "{D7C761E5-FD21-4603-8867-E32FD2BABCEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 TouchNetCore.WebApi", "04 TouchNetCore.WebApi", "{BFCA407E-0C79-43E7-9224-9E215E738ED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Task", "02 TouchNetCore.Task\TouchNetCore.Task\TouchNetCore.Task.csproj", "{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Business", "03 TouchNetCore.Business\TouchNetCore.Business\TouchNetCore.Business.csproj", "{E96D06ED-825D-4660-80BA-13FE0A812A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.WebApi", "04 TouchNetCore.WebApi\TouchNetCore.WebApi\TouchNetCore.WebApi.csproj", "{AA15A96C-23DB-42B8-B378-1344693CFAD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +35,18 @@ Global
 		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96D06ED-825D-4660-80BA-13FE0A812A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96D06ED-825D-4660-80BA-13FE0A812A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96D06ED-825D-4660-80BA-13FE0A812A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96D06ED-825D-4660-80BA-13FE0A812A69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +54,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6B1ED805-445B-4E29-BF80-69F93B7E144E} = {AAB810FB-C8D8-419C-A464-9BEF80FB0DCB}
 		{C9ACC0D1-5A0E-4CB6-AA6F-16B3073B0E01} = {AAB810FB-C8D8-419C-A464-9BEF80FB0DCB}
+		{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5} = {116BF4D7-E30D-4EC5-97EE-9F61A2B1DC83}
+		{E96D06ED-825D-4660-80BA-13FE0A812A69} = {D7C761E5-FD21-4603-8867-E32FD2BABCEC}
+		{AA15A96C-23DB-42B8-B378-1344693CFAD9} = {BFCA407E-0C79-43E7-9224-9E215E738ED8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {682BE16B-10FE-4E19-909E-ED8B9441432D}
