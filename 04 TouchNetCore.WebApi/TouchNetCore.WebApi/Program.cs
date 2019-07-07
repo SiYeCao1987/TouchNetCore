@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TouchNetCore.Component.Redis;
 
 namespace TouchNetCore.WebApi
 {
@@ -19,6 +20,15 @@ namespace TouchNetCore.WebApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hosttingContext, config) =>
+                {
+                    var env = hosttingContext.HostingEnvironment;
+                    config.AddJsonFile("appsettings.json", true, true).
+                           AddJsonFile($"appsettings.{env.EnvironmentName}.json", true, true);
+                    IConfigurationRoot configuration = config.Build();
+                    //初始化redis连接地址
+                    RedisHelper.ConnectionString = configuration["RedisConnectionString"].ToString();
+                })
                 .UseStartup<Startup>();
     }
 }

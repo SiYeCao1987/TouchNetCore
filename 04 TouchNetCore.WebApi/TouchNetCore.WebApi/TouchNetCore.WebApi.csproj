@@ -13,4 +13,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\01 TouchNetCore.Component\TouchNetCore.Component.Autofac\TouchNetCore.Component.Autofac.csproj" />
+    <ProjectReference Include="..\..\01 TouchNetCore.Component\TouchNetCore.Component.Redis\TouchNetCore.Component.Redis.csproj" />
+    <ProjectReference Include="..\..\01 TouchNetCore.Component\TouchNetCore.Component.Utils\TouchNetCore.Component.Utils.csproj" />
+    <ProjectReference Include="..\..\03 TouchNetCore.Business\TouchNetCore.Business\TouchNetCore.Business.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties Properties_4launchSettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

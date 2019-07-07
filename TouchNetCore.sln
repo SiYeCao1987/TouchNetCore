@@ -15,11 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 TouchNetCore.Business", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 TouchNetCore.WebApi", "04 TouchNetCore.WebApi", "{BFCA407E-0C79-43E7-9224-9E215E738ED8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Task", "02 TouchNetCore.Task\TouchNetCore.Task\TouchNetCore.Task.csproj", "{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouchNetCore.Task", "02 TouchNetCore.Task\TouchNetCore.Task\TouchNetCore.Task.csproj", "{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Business", "03 TouchNetCore.Business\TouchNetCore.Business\TouchNetCore.Business.csproj", "{E96D06ED-825D-4660-80BA-13FE0A812A69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouchNetCore.Business", "03 TouchNetCore.Business\TouchNetCore.Business\TouchNetCore.Business.csproj", "{E96D06ED-825D-4660-80BA-13FE0A812A69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.WebApi", "04 TouchNetCore.WebApi\TouchNetCore.WebApi\TouchNetCore.WebApi.csproj", "{AA15A96C-23DB-42B8-B378-1344693CFAD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TouchNetCore.WebApi", "04 TouchNetCore.WebApi\TouchNetCore.WebApi\TouchNetCore.WebApi.csproj", "{AA15A96C-23DB-42B8-B378-1344693CFAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchNetCore.Component.Redis", "01 TouchNetCore.Component\TouchNetCore.Component.Redis\TouchNetCore.Component.Redis.csproj", "{0923A634-42BE-439A-A1C7-3C0AAC312584}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA15A96C-23DB-42B8-B378-1344693CFAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0923A634-42BE-439A-A1C7-3C0AAC312584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0923A634-42BE-439A-A1C7-3C0AAC312584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0923A634-42BE-439A-A1C7-3C0AAC312584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0923A634-42BE-439A-A1C7-3C0AAC312584}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{838C0738-E7BE-4C4F-8BD6-0E472C0FD7E5} = {116BF4D7-E30D-4EC5-97EE-9F61A2B1DC83}
 		{E96D06ED-825D-4660-80BA-13FE0A812A69} = {D7C761E5-FD21-4603-8867-E32FD2BABCEC}
 		{AA15A96C-23DB-42B8-B378-1344693CFAD9} = {BFCA407E-0C79-43E7-9224-9E215E738ED8}
+		{0923A634-42BE-439A-A1C7-3C0AAC312584} = {AAB810FB-C8D8-419C-A464-9BEF80FB0DCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {682BE16B-10FE-4E19-909E-ED8B9441432D}

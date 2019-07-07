@@ -1,0 +1,9 @@
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.deps.json
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.dll
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.csproj.CoreCompileInputs.cache
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.AssemblyInfoInputs.cache
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.AssemblyInfo.cs
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.pdb
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.dll
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.pdb
+E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Redis\obj\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.csprojAssemblyReference.cache

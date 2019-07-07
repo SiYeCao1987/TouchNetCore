@@ -12,3 +12,12 @@ E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2
 E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.dll
 E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.pdb
 E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.csprojAssemblyReference.cache
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Business.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Autofac.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Autofac.pdb
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Redis.pdb
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.pdb
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Business.pdb
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.csproj.CopyComplete
