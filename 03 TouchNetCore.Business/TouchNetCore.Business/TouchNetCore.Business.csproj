@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Dto\" />
-    <Folder Include="Service\Impl\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\01 TouchNetCore.Component\TouchNetCore.Component.Autofac\TouchNetCore.Component.Autofac.csproj" />
+    <ProjectReference Include="..\..\01 TouchNetCore.Component\TouchNetCore.Component.Utils\TouchNetCore.Component.Utils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,12 +10,14 @@ namespace TouchNetCore.Business.Infrastructure.Repository
     /// <summary>
     /// 数据库上下文
     /// </summary>
-    public class TouchDbContext : DbContext, ITransientDependency
+    public class TouchDbContext : DbContext
     {
         public TouchDbContext(DbContextOptions<TouchDbContext> options)
             : base(options)
         {
+            
         }
         public DbSet<test> test { get; set; }
+        public DbSet<SysUser> sysUser { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using TouchNetCore.Business.Entity;
 using TouchNetCore.Business.Infrastructure.Repository;
+using TouchNetCore.Business.Service.Interface;
 using TouchNetCore.Component.Redis;
 
 namespace TouchNetCore.WebApi.Controllers
@@ -21,6 +22,7 @@ namespace TouchNetCore.WebApi.Controllers
         IConfiguration Configuration;
         public TouchDbContext touchDbContext { get; set; }
         public Iperson i { get; set; }
+        public ISysUserService sysUserService { get; set; }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -28,6 +30,10 @@ namespace TouchNetCore.WebApi.Controllers
             RedisHelper redisHelper = new RedisHelper(0);
             List<test> t = touchDbContext.test.ToList();
             string s = i.ss();
+            SysUser sysUser = new SysUser();
+            sysUser.UserId = "1";
+            sysUser.UserName = "2";
+            sysUserService.AddUser(sysUser);
             return new string[] { Configuration["RedisConnectionString"].ToString(), redisHelper.StringGet("1t"), Configuration["envName"].ToString() };
         }
 

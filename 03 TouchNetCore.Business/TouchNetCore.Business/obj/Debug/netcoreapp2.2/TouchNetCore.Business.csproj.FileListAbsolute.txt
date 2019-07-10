@@ -12,3 +12,5 @@ E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcore
 E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Autofac.dll
 E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Autofac.pdb
 E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcoreapp2.2\TouchNetCore.Business.csproj.CopyComplete
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.dll
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.pdb

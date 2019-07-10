@@ -33,6 +33,7 @@ namespace TouchNetCore.WebApi
         {
             services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //注入sql上下文实例
             services.AddDbContext<TouchDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("TouchConnection")));
             //ioc容器初始化
