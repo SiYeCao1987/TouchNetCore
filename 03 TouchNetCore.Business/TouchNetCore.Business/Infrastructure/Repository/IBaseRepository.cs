@@ -18,6 +18,7 @@ namespace TouchNetCore.Business.Infrastructure.Repository
         int Insert(T entity);
         int Insert(List<T> entitys);
         int Update(T entity);
+        int UpdateSelective(T entity);
         int Delete(T entity);
         int Delete(Expression<Func<T, bool>> predicate);
         T FindEntity(object keyValue);

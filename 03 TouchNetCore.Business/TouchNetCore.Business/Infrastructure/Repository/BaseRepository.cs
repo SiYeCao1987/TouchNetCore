@@ -20,6 +20,7 @@ namespace TouchNetCore.Business.Infrastructure.Repository
             dbcontext.Entry<T>(entity).State = EntityState.Added;
             return dbcontext.SaveChanges();
         }
+
         public int Insert(List<T> entitys)
         {
             foreach (var entity in entitys)
@@ -28,7 +29,14 @@ namespace TouchNetCore.Business.Infrastructure.Repository
             }
             return dbcontext.SaveChanges();
         }
+
         public int Update(T entity)
+        {
+            dbcontext.Set<T>().Attach(entity);
+            return dbcontext.SaveChanges();
+        }
+
+        public int UpdateSelective(T entity)
         {
             dbcontext.Set<T>().Attach(entity);
             PropertyInfo[] props = entity.GetType().GetProperties();
@@ -43,94 +51,120 @@ namespace TouchNetCore.Business.Infrastructure.Repository
             }
             return dbcontext.SaveChanges();
         }
+
         public int Delete(T entity)
         {
             dbcontext.Set<T>().Attach(entity);
             dbcontext.Entry<T>(entity).State = EntityState.Deleted;
             return dbcontext.SaveChanges();
         }
+
         public int Delete(Expression<Func<T, bool>> predicate)
         {
             var entitys = dbcontext.Set<T>().Where(predicate).ToList();
             entitys.ForEach(m => dbcontext.Entry<T>(m).State = EntityState.Deleted);
             return dbcontext.SaveChanges();
         }
+
         public T FindEntity(object keyValue)
         {
             return dbcontext.Set<T>().Find(keyValue);
         }
+
         public T FindEntity(Expression<Func<T, bool>> predicate)
         {
             return dbcontext.Set<T>().FirstOrDefault(predicate);
         }
+
         public IQueryable<T> IQueryable()
         {
             return dbcontext.Set<T>();
         }
+
         public IQueryable<T> IQueryable(Expression<Func<T, bool>> predicate)
         {
             return dbcontext.Set<T>().Where(predicate);
         }
+
         public List<T> FindList(string strSql)
         {
             return dbcontext.Set<T>().FromSql<T>(strSql).ToList<T>();
         }
+
         public List<T> FindList(string strSql, SqlParameter[] dbParameter)
         {
             return dbcontext.Set<T>().FromSql<T>(strSql, dbParameter).ToList<T>();
         }
+
         public List<T> FindList(Pagination pagination)
         {
-            bool isAsc = pagination.sord.ToLower() == "asc" ? true : false;
-            string[] _order = pagination.sidx.Split(',');
-            MethodCallExpression resultExp = null;
             var tempData = dbcontext.Set<T>().AsQueryable();
-            foreach (string item in _order)
+            MethodCallExpression resultExp = null;
+            if (!string.IsNullOrEmpty(pagination.sidx))
             {
-                string _orderPart = item;
-                _orderPart = Regex.Replace(_orderPart, @"\s+", " ");
-                string[] _orderArry = _orderPart.Split(' ');
-                string _orderField = _orderArry[0];
-                bool sort = isAsc;
-                if (_orderArry.Length == 2)
+                bool isAsc = pagination.sord.ToLower() == "asc" ? true : false;
+                string[] _order = pagination.sidx.Split(',');
+               
+
+                foreach (string item in _order)
                 {
-                    isAsc = _orderArry[1].ToUpper() == "ASC" ? true : false;
+                    string _orderPart = item;
+                    _orderPart = Regex.Replace(_orderPart, @"\s+", " ");
+                    string[] _orderArry = _orderPart.Split(' ');
+                    string _orderField = _orderArry[0];
+                    bool sort = isAsc;
+                    if (_orderArry.Length == 2)
+                    {
+                        isAsc = _orderArry[1].ToUpper() == "ASC" ? true : false;
+                    }
+                    var parameter = Expression.Parameter(typeof(T), "t");
+                    var property = typeof(T).GetProperty(_orderField);
+                    var propertyAccess = Expression.MakeMemberAccess(parameter, property);
+                    var orderByExp = Expression.Lambda(propertyAccess, parameter);
+                    resultExp = Expression.Call(typeof(Queryable), isAsc ? "OrderBy" : "OrderByDescending", new Type[] { typeof(T), property.PropertyType }, tempData.Expression, Expression.Quote(orderByExp));
                 }
-                var parameter = Expression.Parameter(typeof(T), "t");
-                var property = typeof(T).GetProperty(_orderField);
-                var propertyAccess = Expression.MakeMemberAccess(parameter, property);
-                var orderByExp = Expression.Lambda(propertyAccess, parameter);
-                resultExp = Expression.Call(typeof(Queryable), isAsc ? "OrderBy" : "OrderByDescending", new Type[] { typeof(T), property.PropertyType }, tempData.Expression, Expression.Quote(orderByExp));
             }
-            tempData = tempData.Provider.CreateQuery<T>(resultExp);
+            if (resultExp != null)
+            {
+                tempData = tempData.Provider.CreateQuery<T>(resultExp);
+            }
             pagination.records = tempData.Count();
             tempData = tempData.Skip<T>(pagination.rows * (pagination.page - 1)).Take<T>(pagination.rows).AsQueryable();
             return tempData.ToList();
         }
+
         public List<T> FindList(Expression<Func<T, bool>> predicate, Pagination pagination)
         {
-            bool isAsc = pagination.sord.ToLower() == "asc" ? true : false;
-            string[] _order = pagination.sidx.Split(',');
-            MethodCallExpression resultExp = null;
             var tempData = dbcontext.Set<T>().Where(predicate);
-            foreach (string item in _order)
+            MethodCallExpression resultExp = null;
+            if (!string.IsNullOrEmpty(pagination.sidx))
             {
-                string _orderPart = item;
-                _orderPart = Regex.Replace(_orderPart, @"\s+", " ");
-                string[] _orderArry = _orderPart.Split(' ');
-                string _orderField = _orderArry[0];
-                bool sort = isAsc;
-                if (_orderArry.Length == 2)
+                bool isAsc = pagination.sord.ToLower() == "asc" ? true : false;
+                string[] _order = pagination.sidx.Split(',');
+
+
+                foreach (string item in _order)
                 {
-                    isAsc = _orderArry[1].ToUpper() == "ASC" ? true : false;
+                    string _orderPart = item;
+                    _orderPart = Regex.Replace(_orderPart, @"\s+", " ");
+                    string[] _orderArry = _orderPart.Split(' ');
+                    string _orderField = _orderArry[0];
+                    bool sort = isAsc;
+                    if (_orderArry.Length == 2)
+                    {
+                        isAsc = _orderArry[1].ToUpper() == "ASC" ? true : false;
+                    }
+                    var parameter = Expression.Parameter(typeof(T), "t");
+                    var property = typeof(T).GetProperty(_orderField);
+                    var propertyAccess = Expression.MakeMemberAccess(parameter, property);
+                    var orderByExp = Expression.Lambda(propertyAccess, parameter);
+                    resultExp = Expression.Call(typeof(Queryable), isAsc ? "OrderBy" : "OrderByDescending", new Type[] { typeof(T), property.PropertyType }, tempData.Expression, Expression.Quote(orderByExp));
                 }
-                var parameter = Expression.Parameter(typeof(T), "t");
-                var property = typeof(T).GetProperty(_orderField);
-                var propertyAccess = Expression.MakeMemberAccess(parameter, property);
-                var orderByExp = Expression.Lambda(propertyAccess, parameter);
-                resultExp = Expression.Call(typeof(Queryable), isAsc ? "OrderBy" : "OrderByDescending", new Type[] { typeof(T), property.PropertyType }, tempData.Expression, Expression.Quote(orderByExp));
             }
-            tempData = tempData.Provider.CreateQuery<T>(resultExp);
+            if (resultExp != null)
+            {
+                tempData = tempData.Provider.CreateQuery<T>(resultExp);
+            }
             pagination.records = tempData.Count();
             tempData = tempData.Skip<T>(pagination.rows * (pagination.page - 1)).Take<T>(pagination.rows).AsQueryable();
             return tempData.ToList();

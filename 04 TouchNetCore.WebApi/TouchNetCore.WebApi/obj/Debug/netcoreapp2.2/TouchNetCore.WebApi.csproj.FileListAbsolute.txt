@@ -21,3 +21,5 @@ E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2
 E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.pdb
 E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Business.pdb
 E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\obj\Debug\netcoreapp2.2\TouchNetCore.WebApi.csproj.CopyComplete
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Auth.dll
+E:\TouchNetCore\04 TouchNetCore.WebApi\TouchNetCore.WebApi\bin\Debug\netcoreapp2.2\TouchNetCore.Auth.pdb

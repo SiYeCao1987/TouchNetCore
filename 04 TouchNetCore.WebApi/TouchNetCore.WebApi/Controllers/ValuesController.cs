@@ -8,6 +8,7 @@ using TouchNetCore.Business.Entity;
 using TouchNetCore.Business.Infrastructure.Repository;
 using TouchNetCore.Business.Service.Interface;
 using TouchNetCore.Component.Redis;
+using TouchNetCore.Component.Utils.Helper;
 
 namespace TouchNetCore.WebApi.Controllers
 {
@@ -30,19 +31,25 @@ namespace TouchNetCore.WebApi.Controllers
             RedisHelper redisHelper = new RedisHelper(0);
             List<test> t = touchDbContext.test.ToList();
             string s = i.ss();
-            SysUser sysUser = new SysUser();
-            sysUser.UserId = "1";
-            sysUser.UserName = "2";
-            sysUserService.AddUser(sysUser);
+            //SysUser sysUser = new SysUser();
+            //sysUser.UserId = "1";
+            //sysUser.UserName = "2";
+            //sysUserService.AddUser(sysUser);
             return new string[] { Configuration["RedisConnectionString"].ToString(), redisHelper.StringGet("1t"), Configuration["envName"].ToString() };
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet]
+        [Route("getList")]
+        public ActionResult<List<SysUser>> getList(int page,int rows,string userId)
         {
-            return "value";
+            Pagination pagination = new Pagination();
+            pagination.rows = rows;
+            pagination.page = page;
+            return sysUserService.getSysUserPaginationExpression(userId, pagination);
         }
+
+
 
         // POST api/values
         [HttpPost]

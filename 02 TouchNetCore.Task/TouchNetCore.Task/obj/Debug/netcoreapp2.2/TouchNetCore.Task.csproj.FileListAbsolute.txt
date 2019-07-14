@@ -6,4 +6,3 @@ E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\T
 E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.AssemblyInfo.cs
 E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.dll
 E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.pdb
-E:\TouchNetCore\02 TouchNetCore.Task\TouchNetCore.Task\obj\Debug\netcoreapp2.2\TouchNetCore.Task.csprojAssemblyReference.cache
