@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TouchNetCore.Business</name>
+    </assembly>
+    <members>
+        <member name="P:TouchNetCore.Business.Dto.LoginInputDto.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Business.Dto.LoginInputDto.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="T:TouchNetCore.Business.Infrastructure.Repository.IBaseRepository`1">
+            <summary>
+            基础仓储接口
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:TouchNetCore.Business.Infrastructure.Repository.TouchDbContext">
+            <summary>
+            数据库上下文
+            </summary>
+        </member>
+    </members>
+</doc>

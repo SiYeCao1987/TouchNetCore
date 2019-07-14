@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TouchNetCore.WebApi</name>
+    </assembly>
+    <members>
+        <member name="P:TouchNetCore.WebApi.ControllerRegistrar.Order">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TouchNetCore.WebApi.ControllerRegistrar.Register(Autofac.ContainerBuilder,System.Collections.Generic.List{System.Type})">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <param name="listType"></param>
+        </member>
+        <member name="M:TouchNetCore.WebApi.Controllers.AuthController.Login(TouchNetCore.Business.Dto.LoginInputDto)">
+            <summary>
+            用户登录
+            </summary>
+            <remarks>
+            {"userName":"user","password":"123"}
+            </remarks>
+            <param name="input">登录实体</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

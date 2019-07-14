@@ -4,6 +4,12 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\TouchNetCore.Business.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Infrastructure\Repository\TouchDbContext.cs~RF13c0ee47.TMP" />
   </ItemGroup>
