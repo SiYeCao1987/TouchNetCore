@@ -9,6 +9,8 @@ using TouchNetCore.Auth;
 using TouchNetCore.Auth.Authentication;
 using TouchNetCore.Auth.Security.Session;
 using TouchNetCore.Business.Dto;
+using TouchNetCore.Component.Utils.Helper;
+using TouchNetCore.Component.Utils.Result;
 
 namespace TouchNetCore.WebApi.Controllers
 {
@@ -23,33 +25,40 @@ namespace TouchNetCore.WebApi.Controllers
         /// 用户登录
         /// </summary>
         /// <remarks>
-        /// {"userName":"user","password":"123"}
         /// </remarks>
         /// <param name="input">登录实体</param>
         /// <returns></returns>
         [AllowAnonymous]
         [HttpPost]
         [Route("[action]")]
-        [ProducesResponseType(typeof(Identity), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public ActionResult Login([FromBody]LoginInputDto input)
         {
+            ApiResult apiResult = new ApiResult();
             IIdentity identity;
             try
             {
-                identity = authService.Login(input.UserName, input.Password);
+                identity = authService.Login(input.UserName, input.PassWord);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                apiResult.Code = ApiResultType.Fail;
+                apiResult.Message = ex.Message;
+                return Content(apiResult.ToJson());
             }
             if (identity == null)
-                return Unauthorized("登录失败！请检查用户名及密码是否正确。");
-            if (Session.UserId.HasValue)
+            {
+                apiResult.Code = ApiResultType.Fail;
+                apiResult.Message = "用户名称或者密码错误";
+               return Content(apiResult.ToJson());
+            }
+            if (!string.IsNullOrEmpty(Session.UserId))
+            {
                 authService.Logout();
-            
-            return Ok(identity);
+            }
+            apiResult.Code = ApiResultType.Success;
+            apiResult.Message = "登录成功";
+            apiResult.Data = identity;
+            return Content(apiResult.ToJson());
         }
     }
 }

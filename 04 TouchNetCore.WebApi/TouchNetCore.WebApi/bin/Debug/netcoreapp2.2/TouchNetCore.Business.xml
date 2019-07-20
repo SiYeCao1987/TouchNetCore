@@ -9,9 +9,24 @@
             用户名称
             </summary>
         </member>
-        <member name="P:TouchNetCore.Business.Dto.LoginInputDto.Password">
+        <member name="P:TouchNetCore.Business.Dto.LoginInputDto.PassWord">
             <summary>
             用户密码
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Business.Entity.SysUser.UserId">
+            <summary>
+            系统用户id
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Business.Entity.SysUser.UserName">
+            <summary>
+            系统用户名称
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Business.Entity.SysUser.PassWord">
+            <summary>
+            系统用户密码
             </summary>
         </member>
         <member name="T:TouchNetCore.Business.Infrastructure.Repository.IBaseRepository`1">

@@ -16,7 +16,7 @@ namespace TouchNetCore.Auth
         [Newtonsoft.Json.JsonIgnore]
         public virtual string UserIdentity => UserId.ToString();
 
-        public virtual long UserId { get; set; }
+        public virtual string UserId { get; set; }
 
         /// <summary>
         /// 用户账号
@@ -75,7 +75,7 @@ namespace TouchNetCore.Auth
         {
         }
 
-        public Identity(long userId, string userName, IToken token)
+        public Identity(string userId, string userName, IToken token)
         {
             UserId = userId;
             UserName = userName;

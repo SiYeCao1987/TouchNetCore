@@ -15,3 +15,4 @@ E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\obj\Debug\netcore
 E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.dll
 E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.pdb
 E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Business.xml
+E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.xml

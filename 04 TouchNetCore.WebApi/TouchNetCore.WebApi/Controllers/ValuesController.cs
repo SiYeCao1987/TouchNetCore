@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using TouchNetCore.Business.Entity;
@@ -16,9 +17,11 @@ namespace TouchNetCore.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private ILog log;
         public ValuesController(IConfiguration configuration)
         {
             Configuration = configuration;
+            this.log = LogManager.GetLogger(Startup.Repository.Name, typeof(ValuesController));
         }
         IConfiguration Configuration;
         public TouchDbContext touchDbContext { get; set; }
@@ -30,11 +33,12 @@ namespace TouchNetCore.WebApi.Controllers
         {
             RedisHelper redisHelper = new RedisHelper(0);
             List<test> t = touchDbContext.test.ToList();
-            string s = i.ss();
+            //string s = i.ss();
             //SysUser sysUser = new SysUser();
             //sysUser.UserId = "1";
             //sysUser.UserName = "2";
             //sysUserService.AddUser(sysUser);
+            log.Error("测试日志");
             return new string[] { Configuration["RedisConnectionString"].ToString(), redisHelper.StringGet("1t"), Configuration["envName"].ToString() };
         }
 

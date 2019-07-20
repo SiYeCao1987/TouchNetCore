@@ -21,18 +21,28 @@ using TouchNetCore.Component.Autofac;
 using TouchNetCore.Component.Redis;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
+using TouchNetCore.WebApi.MiddleWare.ExceptionHandle;
+using log4net.Repository;
+using log4net;
+using log4net.Config;
+using TouchNetCore.WebApi.MiddleWare.Log;
 
 namespace TouchNetCore.WebApi
 {
     public class Startup
     {
-        private static readonly string swaggerDocName = "v1";
-        private readonly IHostingEnvironment HostingEnvironment;
+        private static readonly string _swaggerDocName = "v1";
+        private readonly IHostingEnvironment _hostingEnvironment;
+        public static ILoggerRepository Repository { get; set; }
 
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
-            HostingEnvironment = env;
+            _hostingEnvironment = env;
+            Repository = LogManager.CreateRepository("NETCoreRepository");
+            XmlConfigurator.Configure(Repository, new FileInfo("log4net.config"));
+            InitRepository.LoggerRepository = Repository;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -40,7 +50,10 @@ namespace TouchNetCore.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(o=>{
+                o.Filters.Add(typeof(GlobalExceptions));
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
             //注入sql上下文实例
             services.AddDbContext<TouchDbContext>(options =>
@@ -58,7 +71,7 @@ namespace TouchNetCore.WebApi
                 c.IgnoreObsoleteActions();
                 c.SwaggerDoc(
                     // name: 攸關 SwaggerDocument 的 URL 位置。
-                    name: swaggerDocName,
+                    name: _swaggerDocName,
                     // info: 是用於 SwaggerDocument 版本資訊的顯示(內容非必填)。
                     info: new Info
                     {
@@ -87,6 +100,7 @@ namespace TouchNetCore.WebApi
                     c.IncludeXmlComments(xmlPath);
                 }
                 c.IncludeXmlComments(@"E:\TouchNetCore\03 TouchNetCore.Business\TouchNetCore.Business\bin\Debug\netcoreapp2.2\TouchNetCore.Business.xml");
+                c.IncludeXmlComments(@"E:\TouchNetCore\01 TouchNetCore.Component\TouchNetCore.Component.Utils\bin\Debug\netcoreapp2.2\TouchNetCore.Component.Utils.xml");
             });
 
             //ioc容器初始化
@@ -94,7 +108,7 @@ namespace TouchNetCore.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment() || env.IsEnvironment("Functest"))
             {
@@ -106,7 +120,8 @@ namespace TouchNetCore.WebApi
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            //app.UseMyExceptionHandler(loggerFactory);
+            app.UseHttpsRedirection();
             app.UseMvcWithDefaultRoute();
             app.UseStaticFiles();
 
@@ -116,7 +131,7 @@ namespace TouchNetCore.WebApi
             {
                 c.SwaggerEndpoint(
                     // url: 需配合 SwaggerDoc 的 name。 "/swagger/{SwaggerDoc name}/swagger.json"
-                    url: $"../swagger/{swaggerDocName}/swagger.json", //这里一定要使用相对路径，不然网站发布到子目录时将报告："Not Found /swagger/v1/swagger.json"
+                    url: $"../swagger/{_swaggerDocName}/swagger.json", //这里一定要使用相对路径，不然网站发布到子目录时将报告："Not Found /swagger/v1/swagger.json"
                                                                       // description: 用於 Swagger UI 右上角選擇不同版本的 SwaggerDocument 顯示名稱使用。
                     name: "RESTful API v1.0.0"
                 );

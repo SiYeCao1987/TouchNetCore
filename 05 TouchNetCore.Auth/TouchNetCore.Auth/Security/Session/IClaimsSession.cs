@@ -14,7 +14,7 @@ namespace TouchNetCore.Auth.Security.Session
         /// <summary>
         /// 用户ID
         /// </summary>
-        long? UserId { get; }
+        string UserId { get; }
 
         /// <summary>
         /// 用户名(账号)

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TouchNetCore.Component.Utils</name>
+    </assembly>
+    <members>
+        <member name="M:TouchNetCore.Component.Utils.Helper.ExtLinq.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+            Initializes a new instance of the <see cref="T:TouchNetCore.Component.Utils.Helper.ExtLinq.ParameterRebinder"/> class.
+            </summary>
+            <param name="map">The map.</param>
+        </member>
+        <member name="M:TouchNetCore.Component.Utils.Helper.ExtLinq.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            Replaces the parameters.
+            </summary>
+            <param name="map">The map.</param>
+            <param name="exp">The exp.</param>
+            <returns>Expression</returns>
+        </member>
+        <member name="T:TouchNetCore.Component.Utils.Helper.JsonHelper">
+            <summary>
+            json帮助类
+            </summary>
+        </member>
+        <member name="T:TouchNetCore.Component.Utils.Helper.Pagination">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Helper.Pagination.rows">
+            <summary>
+            每页行数
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Helper.Pagination.page">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Helper.Pagination.sidx">
+            <summary>
+            排序列
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Helper.Pagination.sord">
+            <summary>
+            排序类型
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Helper.Pagination.records">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Helper.Pagination.total">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="T:TouchNetCore.Component.Utils.Result.ApiResult">
+            <summary>
+            api接口响应结果
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Result.ApiResult.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Result.ApiResult.Message">
+            <summary>
+            消息描述
+            </summary>
+        </member>
+        <member name="P:TouchNetCore.Component.Utils.Result.ApiResult.Data">
+            <summary>
+            实体数据
+            </summary>
+        </member>
+        <member name="T:TouchNetCore.Component.Utils.Result.ApiResultType">
+            <summary>
+            Api响应枚举
+            </summary>
+        </member>
+        <member name="F:TouchNetCore.Component.Utils.Result.ApiResultType.Success">
+            <summary>
+            请求成功
+            </summary>
+        </member>
+        <member name="F:TouchNetCore.Component.Utils.Result.ApiResultType.Fail">
+            <summary>
+            请求失败
+            </summary>
+        </member>
+        <member name="F:TouchNetCore.Component.Utils.Result.ApiResultType.ParamError">
+            <summary>
+            请求参数异常
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -18,7 +18,7 @@ namespace TouchNetCore.Business.Dto
         /// <summary>
         /// 用户密码
         /// </summary>
-        public string Password { get; set; }
+        public string PassWord { get; set; }
 
     }
 }

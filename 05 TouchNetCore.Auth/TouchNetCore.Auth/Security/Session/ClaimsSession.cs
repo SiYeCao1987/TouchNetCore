@@ -46,7 +46,7 @@ namespace TouchNetCore.Auth.Security.Session
         /// <summary>
         /// 用户ID
         /// </summary>
-        public long? UserId => ReadClaim<long>(ClaimTypes.UserId);
+        public string UserId => ReadClaim(ClaimTypes.UserId);
 
         /// <summary>
         /// 用户名(账号)

@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using TouchNetCore.Auth.Authentication;
 using TouchNetCore.Auth.Security.Session;
+using TouchNetCore.Business.Entity;
+using TouchNetCore.Business.Repository;
 using TouchNetCore.Component.Autofac;
 
 namespace TouchNetCore.Auth
 {
-    public class SampleAuthenticationService : IAuthenticationService, ITransientDependency
+    /// <summary>
+    /// 认证服务实现
+    /// </summary>
+    public class AuthenticationServiceImpl : IAuthenticationService, ITransientDependency
     {
         class User
         {
@@ -27,34 +32,55 @@ namespace TouchNetCore.Auth
             new User(3, "tester", "123")
         };
 
-        public SampleAuthenticationService(IClaimsSession session)
+        public ISysUserRepository<SysUser> sysUserRepository { get; set; }
+
+        public AuthenticationServiceImpl(IClaimsSession session)
         {
             this.Session = session;
         }
 
-        public IIdentity Login(string userName, string password)
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public IIdentity Login(string userName, string passWord)
         {
+            decimal i = 0;
+            decimal a = 1 / i;
             if (string.IsNullOrEmpty(userName))
                 throw new ArgumentNullException(nameof(userName));
-            if (string.IsNullOrEmpty(password))
-                throw new ArgumentNullException(nameof(password));
-            var user = users.FirstOrDefault(u => u.UserName.Equals(userName, StringComparison.InvariantCultureIgnoreCase) && u.Password == password);
-            if (user == null)
+            if (string.IsNullOrEmpty(passWord))
+                throw new ArgumentNullException(nameof(passWord));
+            var sysUser = sysUserRepository.FindEntity(u => u.UserName.Equals(userName, StringComparison.InvariantCultureIgnoreCase) && u.PassWord == passWord);
+            if (sysUser == null)
+            {
                 return null;
-
+            }
             var token = SimpleToken.NewToken(60);
-            var identity = new Identity(user.Id, user.UserName, token);
+            var identity = new Identity(sysUser.UserId, sysUser.UserName, token);
             identities.Add(identity);
             return identity;
         }
 
+        /// <summary>
+        /// 退出登录
+        /// </summary>
         public void Logout()
         {
             var identity = identities.FirstOrDefault(p => p.UserId == Session.UserId && p.AccessToken == Session.AccessToken);
             if (identity != null)
+            {
                 identity.Invalid = true;
+            }
         }
 
+        /// <summary>
+        /// 刷新token
+        /// </summary>
+        /// <param name="refreshToken"></param>
+        /// <returns></returns>
         public IToken RefreshToken(string refreshToken)
         {
             var identity = identities.FirstOrDefault(p => p.AccessToken == Session.AccessToken && p.RefreshToken == refreshToken && !p.Invalid);
@@ -67,6 +93,11 @@ namespace TouchNetCore.Auth
             return token;
         }
 
+        /// <summary>
+        /// 验证token
+        /// </summary>
+        /// <param name="accessToken"></param>
+        /// <returns></returns>
         public IIdentity ValidateToken(string accessToken)
         {
             var identity = identities.FirstOrDefault(p => p.AccessToken == accessToken && !p.Invalid);
